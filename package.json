@@ -1,0 +1,19 @@
+{
+  "name": "emailer",
+  "version": "1.0.0",
+  "description": "resume emailer",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "reload": "^2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "nodemon server.js"
+  },
+  "author": "Adrian Acosta",
+  "license": "ISC"
+}
