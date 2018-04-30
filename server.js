@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:6789');
+    res.setHeader('Access-Control-Allow-Origin', '*');
   
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -26,9 +26,10 @@ app.use(function (req, res, next) {
 
   app.use(bodyParser.urlencoded({ extended: true }));
 
-  app.use("/assets", express.static(__dirname + "./assets"));
+  app.use("/assets", express.static(__dirname + "/assets"));
 
-  require('./app/routes')(app);
+  require('./app/routes/routes')(app);
+
 
   app.listen(port);
 
