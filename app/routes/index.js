@@ -36,7 +36,7 @@ module.exports = function (app) {
                 console.log('error');
                 res.send('Something went wrong. Error: \n'+ error);
             }else{
-                res.send('Email sent to: '+mailOptions.destination + '.Response:\n'+info.response);
+                res.send('Email sent to: '+mailOptions.to + '.Response:\n'+info.response);
             };
         });
     });
